@@ -33,5 +33,5 @@ function errorCatcher(e) {
   console.log(e);
 }
 
-returnsPromise().then(asyncFnThatResolvesFine).then(asyncFnThatReturnsErr).catch(errorCatcher);
-// returnsPromise().then(asyncFnThatResolvesFine).catch(reject);
+// returnsPromise().then(asyncFnThatResolvesFine).then(asyncFnThatReturnsErr).catch(errorCatcher);
+returnsPromise().then(asyncFnThatReturnsErr).catch(errorCatcher);
