@@ -6,7 +6,7 @@ fs.readFile('./dummy.txt', () => {
 });
 
 setTimeout(() => {
-  console.log('Timers Phase');
+  console.log('Timer 1');
   // calling process.nextTick here will
   // cause the function to execute after the timers phase
   // and before the IO phase
@@ -33,4 +33,12 @@ setTimeout(() => {
       }
     });
   });
+}, 0);
+
+setTimeout(() => {
+  console.log('Timer 2');
+}, 0);
+
+setTimeout(() => {
+  console.log('Timer 3');
 }, 0);
